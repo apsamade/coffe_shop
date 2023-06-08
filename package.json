@@ -16,7 +16,6 @@
   "name": "starter-express-api",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -25,5 +24,4 @@
     "start": "node server.js",
     "start-server": "server.js"
   }
-  
 }
