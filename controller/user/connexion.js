@@ -9,7 +9,6 @@ exports.postConnexion = (req, res, next)=>{
     const {email, mdp} = req.body;
 
     console.log('email : ' + email)
-    console.log('mdp : ' + mdp)
  
     User.find()
     .then((user) => {
