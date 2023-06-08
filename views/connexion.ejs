@@ -12,7 +12,45 @@
 </head>
 <body>
 
-    <%- include('partials/nav.ejs') %>
+    <% if(user){ %>
+        <nav class="navbar">
+            <a href="/"><img class="logo" src="/public/img/coffee-logo.png" alt=""></a>
+            <div class="navbar-collapse">
+                <ul class="navbar-list">
+                  <li class="navbar-item"><a href="#" class="navbar-link">Liste de produits</a></li>
+                  <li class="navbar-item navbar-right"><a href="#" class="navbar-link">Mon panier</a></li>
+                  <% if(isAdmin){ %>
+                    <li class="navbar-item navbar-right"><a href="/add-product" class="navbar-link">Add Product</a></li>
+                  <% } %>
+                </ul>
+                <div class="navbar-auth">
+                  <a href="/me" class="navbar-auth-link"><img src="/public/img/user.png" alt=""></a>
+                </div>
+            </div>
+        </nav>
+        <div class="burger visible">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <aside>
+            <a href="/"><img class="logo" src="/public/img/coffee-logo.png" alt=""></a>
+            <div class="navbar-collapse">
+                <ul class="navbar-list">
+                  <li class="navbar-item"><a href="#" class="navbar-link">Liste de produits</a></li>
+                  <li class="navbar-item navbar-right"><a href="#" class="navbar-link">Mon panier</a></li>
+                  <% if(isAdmin){ %>
+                    <li class="navbar-item navbar-right"><a href="/add-product" class="navbar-link">Add Product</a></li>
+                  <% } %>
+                </ul>
+                <div class="navbar-auth">
+                  <a href="/me" class="navbar-auth-link">Mon compte</a>
+                </div>
+            </div>
+          </aside>
+    <% }else{ %>
+        <%- include('partials/nav.ejs') %>
+    <% } %>
     <div class="container">
         <form method="POST">
             <h1>Connexion</h1>
