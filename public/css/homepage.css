@@ -68,7 +68,7 @@ body {
     background-image: url('/public/img/coffee-img-header-7.jpg');
     background-size: 100%;
     width: 100%;
- 
+    background-repeat: no-repeat;
   }
   
   .animated-text {
