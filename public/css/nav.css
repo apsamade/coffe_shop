@@ -77,7 +77,7 @@ nav .navbar-auth a:hover{
 aside{
     display: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
     nav{
         display: none;
     
@@ -85,6 +85,10 @@ aside{
     .burger{
         display: flex;
         z-index: 150;
+    }
+    .visible{
+        background-color: #151515;
+        box-shadow: 0 0 0 10px #151515;
     }
     .croix span:nth-child(1){
         transform: rotateZ(45deg);

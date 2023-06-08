@@ -109,4 +109,23 @@ body {
       display: none;
     }
   }
-  
+  @media screen and (max-width: 900px) {
+    .slide1 {
+      background-image: url('/public/img/coffee-img-header-8.jpg');
+    }
+    
+    .slide2 {
+      background-image: url('/public/img/coffee-img-header-9.jpg');
+    }
+    
+    .slide3 {
+      background-image: url('/public/img/coffee-img-header-10.jpg');
+   
+    }
+    .slide4 {
+      background-image: url('/public/img/coffee-img-header-11.jpg');
+    }
+    .slider-controls {
+      bottom: 280px;
+    }
+  }
