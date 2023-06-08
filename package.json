@@ -22,7 +22,8 @@
   "license": "ISC",
   "description": "",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js",
+    "start-server": "server.js"
   }
   
 }
