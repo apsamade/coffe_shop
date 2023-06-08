@@ -20,7 +20,7 @@ exports.postConnexion = (req, res, next)=>{
           console.log('ma user session : ' + req.session.user);
           res.redirect('/');
         } else {
-          res.render('/')
+          res.render('401')
           console.log('erreur lors de votre connexion, mot de passe ou email invalide')
         }
       })
