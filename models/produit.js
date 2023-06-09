@@ -15,7 +15,7 @@ const schemaProduit = new mongoose.Schema({
     description: {
         type: String
     },
-    image: {
+    prix: {
         type: String
     }
 }) 
