@@ -135,8 +135,11 @@ body {
     margin: 30px auto;
     display: flex;
     align-items: end;
-    justify-content: space-around;
+    justify-content: space-between;
     white-space: nowrap;
+  }
+  .articles .last-slide {
+    justify-content: flex-end; 
   }
   .slick-slider {
     position: relative;

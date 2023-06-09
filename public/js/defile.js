@@ -43,7 +43,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     function updateSlide() {
-      slider.style.transform = "translateX(" + slideT + "px)";
-    }
+        slider.style.transform = "translateX(" + slideT + "px)";
+        
+        if (slideIndex === slides.length - 1) {
+          slider.classList.add("last-slide");
+        } else {
+          slider.classList.remove("last-slide");
+        }
+      }
+      
   });
   
