@@ -72,4 +72,8 @@ body {
     .info-compte h3 {
       font-size: 18px;
     }
+    .info-compte{
+      margin: 14px 0px;
+      padding: 6px;
+    }
   }
