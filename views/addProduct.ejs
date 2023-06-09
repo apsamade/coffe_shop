@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/public/css/nav.css">
     <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/add-product.css">
     <link rel="shortcut icon" href="/public/img/coffee-logo.png" type="image/x-icon">
 </head>
 <body>
@@ -49,10 +50,35 @@
     <% }else{ %>
         <%- include('partials/nav.ejs') %>
     <% } %>
-    <h1>Add product</h1>
-    <form method="POST">
+    <section class="container">
+        <h1>Ajouter un produit</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="titre">Nom du produit</label>
+            <input type="text" id="titre" name="titre" required>
 
-    </form>
+            <label for="description">Description</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="categorie">Type de café :</label>
+
+            <select name="categorie" id="categorie">
+                <option value="expresso">Expresso</option>
+                <option value="cappuccino">Cappuccino</option>
+                <option value="latte">Latte</option>
+                <!-- Ajoutez d'autres options de café ici -->
+            </select>
+
+
+            <label for="prix">Prix (en euros) :</label>
+            <input type="number" name="prix" id="prix" step="0.01" min="0.01" placeholder="0.00">
+
+
+            <input type="file" name="image" id="image-input">
+            <label for="image-input" class="custom-file-upload">Choisir un fichier</label>
+
+            <button type="submit">Ajouter</button>
+        </form>
+    </section>
     <script src="/public/js/navBurger.js"></script>
 
 </body>

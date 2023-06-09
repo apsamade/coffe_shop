@@ -1,0 +1,98 @@
+/* add-product.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+
+  .container h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #7A4E39;
+    font-family: 'Lobster', cursive;
+  }
+
+  .container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .container label {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .containerinput[type="text"], textarea {
+    width: 92%;
+    resize: vertical;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .container select {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .container input[type="number"] {
+    width: 92%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .container button[type="submit"] {
+    background-color: #7A4E39;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-family: 'Lobster', cursive;
+  }
+
+  .container button[type="submit"]:hover {
+    background-color: #603b2d;
+  }
+
+  .container button[type="submit"]:focus {
+    outline: none;
+  }
+
+  .container input[type="file"] {
+    display: none;
+  }
+
+  .container .custom-file-upload {
+    background-color: #7A4E39;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Lobster', cursive;
+  }
+
+  .container .custom-file-upload:hover {
+    background-color: #603b2d;
+  }
+  input{
+    width: 92%;
+    padding: 8px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    margin: 15px 0;
+  }
