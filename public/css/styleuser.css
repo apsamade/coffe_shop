@@ -61,6 +61,15 @@ body {
   }
   @media screen and (max-width: 900px) {
     h3{
-      font-size: 1.3rem;
+      font-size: 1rem;
+    }
+    .info-compte-2 :nth-child(1):not(.presentation :nth-child(1)){
+      width: 25%;
+    }
+    .info-compte-2 :nth-child(2):not(.presentation :nth-child(2)){
+      width: 75%;
+    }
+    .info-compte h3 {
+      font-size: 18px;
     }
   }
