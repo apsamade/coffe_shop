@@ -1,3 +1,4 @@
+const Produit = require('../../models/produit')
 exports.getHome = async (req, res, next)=>{
     const user = req.session.user
     let isAdmin = false;
@@ -9,7 +10,8 @@ exports.getHome = async (req, res, next)=>{
         }
     }
     try {
-        res.render('home', { user, isAdmin });
+        const produits = await Produit.find({}, { __v: 0, createdAt: 0, updatedAt: 0 })
+        res.render('home', { user, isAdmin, produits });
       } catch (err) {
         console.log(err);
       }
