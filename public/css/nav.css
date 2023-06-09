@@ -89,6 +89,7 @@ aside{
     .visible{
         background-color: #151515;
         box-shadow: 0 0 0 10px #151515;
+        border-radius: 0 0 0 2px;
     }
     .croix span:nth-child(1){
         transform: rotateZ(45deg);
