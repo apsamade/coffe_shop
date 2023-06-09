@@ -4,33 +4,46 @@ document.addEventListener("DOMContentLoaded", function() {
     var prevButton = document.querySelector(".prev");
     var nextButton = document.querySelector(".next");
     var slideIndex = 0;
-    let slideWidth = slides[0].offsetWidth;
-    let slideT = 0;
+    var slideWidth = slides[0].offsetWidth;
+    var slideT = 0;
+    
+    // Vérifie si l'article 1 est entièrement visible dans la fenêtre
+    function isArticle1Visible() {
+      var article1Rect = slides[0].getBoundingClientRect();
+      return (article1Rect.left >= 0 && article1Rect.right <= window.innerWidth);
+    }
+    
+    // Vérifie si le dernier article est entièrement visible dans la fenêtre
+    function isLastArticleVisible() {
+      var lastArticleRect = slides[slides.length - 1].getBoundingClientRect();
+      return (lastArticleRect.left >= 0 && lastArticleRect.right <= window.innerWidth);
+    }
+    
     prevButton.addEventListener("click", prevSlide);
     nextButton.addEventListener("click", nextSlide);
-  
+    
     function prevSlide() {
+      if (isArticle1Visible()) {
+        return; // Ne fait rien si l'article 1 est entièrement visible
+      }
+      
       slideIndex--;
       slideT += slideWidth;
-      console.log('apres ajout : ' + slideIndex)
-      if (slideIndex <= 0) {
-        slideIndex = slides.length + 1;
-      }
       updateSlide();
     }
-  
+    
     function nextSlide() {
+      if (isLastArticleVisible()) {
+        return; // Ne fait rien si le dernier article est entièrement visible
+      }
+      
       slideIndex++;
       slideT -= slideWidth;
-      console.log('avant ajout : ' + slideIndex)
-      if (slideIndex >= slides.length) {
-        slideIndex = 0;
-      }
       updateSlide();
     }
-  
+    
     function updateSlide() {
-        slider.style.transform = "translateX(" + (slideT) + "px)";
+      slider.style.transform = "translateX(" + slideT + "px)";
     }
   });
   
