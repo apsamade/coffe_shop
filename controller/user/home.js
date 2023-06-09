@@ -17,5 +17,5 @@ exports.getHome = async (req, res, next)=>{
       }
 }
 exports.postHome = (req, res, next)=>{
-    
+    res.redirect('/')
 }

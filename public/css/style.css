@@ -11,6 +11,7 @@ body{
     font-family: 'Oswald', sans-serif;
     font-family: 'Roboto', sans-serif;
     background-color: #fffbf4;
+    overflow-x: hidden;
 }
 @keyframes apparition{
     100%{
