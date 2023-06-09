@@ -70,6 +70,10 @@
         <p class="animated-text">Découvrez notre délicieuse sélection de cafés</p>
     </main>
     <h2>Notre game de café :</h2>
+    <div class="defile">
+      <button class="prev">&#8249;</button>
+      <button class="next">&#8250;</button>        
+    </div>
     <section class="articles">
       <div class="slick-slider">
       <% produits.forEach(function(produit) { %>
@@ -86,11 +90,7 @@
       <%})%>
       </div>
     </section>
-      <div class="defile">
-        <button class="prev">&#8249;</button>
-        <button class="next">&#8250;</button>        
-      </div>
-
+      
     <script src="/public/js/home.js"></script>
     <script src="/public/js/navBurger.js"></script>
     <script src="/public/js/defile.js"></script>

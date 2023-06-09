@@ -195,10 +195,6 @@ body {
     height: 120px;
 }
 .defile{
-  position: absolute;
-  top: 130%;
-  left: 0;
-  right: 0;
   width: 98%;
   margin: auto;
   display: flex;
