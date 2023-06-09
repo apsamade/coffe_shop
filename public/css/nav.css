@@ -85,6 +85,7 @@ aside{
     .burger{
         display: flex;
         z-index: 150;
+        width: 60px;
     }
     .visible{
         background-color: #151515;
