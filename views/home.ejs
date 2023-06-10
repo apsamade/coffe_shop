@@ -70,25 +70,26 @@
         <p class="animated-text">Découvrez notre délicieuse sélection de cafés</p>
     </main>
     <h2>Notre game de café :</h2>
-      <div class="defile">
-        <button class="prev">&#8249;</button>
-        <button class="next">&#8250;</button>        
-      </div>
-    <section class="articles">
-      <% produits.forEach(function(produit) { %>
-        <div class="article">
-          <img src="/public/img/<%= produit.image %>" alt="">
-          <h3><%= produit.titre %></h3>
-          <div class="flex">
-            <h4>Prix : <%= produit.prix %> €</h4>  
-            <h4><%= produit.categorie %></h4>       
-          </div>   
-          <form class="formpanier" method="POST"><button class="ap">Ajouter au panier</button></form>   
-          <p class="truncate"><br><%= produit.description %></p>
-        </div>
-      <%})%>
-    </section>
-      
+    <div class="defile">
+      <button class="prev">&#8249;</button>
+      <button class="next">&#8250;</button>        
+    </div>
+    <main class="slisli">
+      <section class="articles">
+        <% produits.forEach(function(produit) { %>
+          <div class="article">
+            <img src="/public/img/<%= produit.image %>" alt="">
+            <h3><%= produit.titre %></h3>
+            <div class="flex">
+              <h4>Prix : <%= produit.prix %> €</h4>  
+              <h4><%= produit.categorie %></h4>       
+            </div>   
+            <form class="formpanier" method="POST"><button class="ap">Ajouter au panier</button></form>   
+            <p class="truncate"><br><%= produit.description %></p>
+          </div>
+        <%})%>
+      </section>
+    </main>  
     <script src="/public/js/home.js"></script>
     <script src="/public/js/navBurger.js"></script>
     <script src="/public/js/defile.js"></script>

@@ -21,7 +21,10 @@ body{
 }
 
 
-
+.slisli{
+    width: 100%;
+    overflow-x: hidden;
+}
 .ap {
     
     margin: 15px auto 5px;
