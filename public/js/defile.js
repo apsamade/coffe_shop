@@ -31,7 +31,7 @@ function scrollLeft() {
     currentIndex = 0;
   }
   articlesSection.style.transition = 'transform 0.3s ease-in-out';
-  articlesSection.style.transform = `translateX(-${currentIndex * 371}px)`;
+  articlesSection.style.transform = `translateX(-${currentIndex * 481}px)`;
 
 
   var firstArticle = articles[0];
