@@ -140,7 +140,7 @@ body {
   }
   @media screen and (max-width: 900px) {
     .articles{
-      margin: 30px auto 30px -75px;
+      margin: 30px auto 30px -15%;
     }
     
   }
