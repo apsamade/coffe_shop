@@ -138,7 +138,12 @@ body {
     white-space: nowrap;
     flex-wrap: nowrap;
   }
-  
+  @media screen and (max-width: 900px) {
+    .articles{
+      margin: 30px auto 30px -29pxpx;
+    }
+    
+  }
   h2{
     color: rgb(179, 110, 110);
     font-size: 2.8rem;
