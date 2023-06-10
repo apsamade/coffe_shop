@@ -1,4 +1,5 @@
 const Produit = require('../../models/produit')
+
 exports.getHome = async (req, res, next)=>{
     const user = req.session.user
     let isAdmin = false;

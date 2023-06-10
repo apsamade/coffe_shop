@@ -1,35 +1,34 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var slider = document.querySelector(".slick-slider");
     var slides = document.querySelectorAll(".article");
     var prevButton = document.querySelector(".prev");
     var nextButton = document.querySelector(".next");
-    var slideIndex = 0;
     var slideWidth = slides[0].offsetWidth;
-    var slideT = 0;
-    prevButton.addEventListener("click", prevSlide);
-    nextButton.addEventListener("click", nextSlide);
-  
-    function prevSlide() {
-      slideIndex--;
-      slideT += slideWidth;
-      if (slideIndex < 0) {
-        slideIndex = slides.length - 2;
-        slideT = -slideWidth * slideIndex;
-      }
-      updateSlide();
+    let slideArray = []
+
+    
+
+    slides.forEach((div, index)=>{
+      div.setAttribute('data-order', index + 1)
+      slideArray.push(div)
+    })
+
+    function moveLastToFirst() {
+      const lastElement = slideArray.pop();
+      slideArray.unshift(lastElement);
     }
-  
-    function nextSlide() {
-      slideIndex++;
-      slideT -= slideWidth;
-      if (slideIndex >= slides.length - 1) {
-        slideIndex = 0;
-        slideT = 0;
-      }
-      updateSlide();
+    function moveFirstToLast() {
+      const firstElement = slideArray.shift();
+      slideArray.push(firstElement);
     }
-  
-    function updateSlide() {
-      slider.style.transform = "translateX(" + slideT + "px)";
-    }
+    
+    prevButton.addEventListener("click", ()=>{
+      moveFirstToLast();
+      console.log(slideArray)
+    });
+    nextButton.addEventListener("click", ()=>{
+      moveLastToFirst();
+      console.log(slideArray)
+    });
+
+    
 });
